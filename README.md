@@ -1,5 +1,5 @@
 # Browser Start Page
-![Preview](https://imgur.com/a/7u6jZOS "Preview")
+![Preview](https://imgur.com/o7HRdnt)
 
 # How to use
 There are three ways to use this page:
