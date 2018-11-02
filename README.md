@@ -3,9 +3,9 @@
 ![Video preview](https://i.imgur.com/YM89g3K.gif)
 # How to use
 There are three ways to use this page:
-1. (Not recommended) Use your mouse to hover over the categories to open the menu, then click on the link you wish to open.
+1. Use your mouse to hover over the categories to open the menu, then click on the link you wish to open.
 2. Use the up and down arrow keys to navigate through the category names. Once you get to the desired category, use the right arrow key to switch to navigation through the links. Use the up and down arrow keys to choose the desired link. Press enter to select that link. To go back to the categories, use the left arrow key. 
-3. Use the numbers to choose the link. The first number you type will choose the category name and the second number you type will choose the link. Press enter to navigate to that link. For example, pressing '3 1' will select the 1st link in the 3rd category, which is reddit for me. Once you get used to the positions of all the links, this is the fastest way.
+3. (Fastest) Use the numbers to choose the link. The first number you type will choose the category name and the second number you type will choose the link. Press enter to navigate to that link. For example, pressing '3 1' will select the 1st link in the 3rd category, which is reddit for me. Once you get used to the positions of all the links, this is the fastest way.
 
 # How to install
 Download or clone this repository to a known location.
