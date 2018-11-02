@@ -1,0 +1,108 @@
+@font-face {
+	font-family: 'Pacifico';
+	src: url(Pacifico.ttf);
+}
+@font-face {
+	font-family: 'Roboto Mono';
+	src: url(RobotoMono-Medium.ttf);
+}
+:root {
+	--text-color: #dfdfdf;
+	--background-color: #323234;
+
+	/* Color palette for items */
+	--color-1: #883d26;
+	--color-2: #428826;
+	--color-3: #887e26;
+	--color-4: #267488;
+	--color-5: #88266f;
+	
+	--color-1: #cc241d;
+	--color-2: #98971a;
+	--color-3: #a37f08;
+	--color-4: #458588;
+	--color-5: #b16286;
+}
+body {
+	background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+	font-family: 'Roboto Mono';
+}
+#greeting {
+	font-family: 'Pacifico';
+	font-weight: 500;
+	font-size: 90px;
+	position: absolute;
+	top: 10%;
+}
+#app-block {
+	display: grid;
+	grid-template-columns: auto 200px;
+}
+#app-menu {
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	grid-row: 1;
+	grid-column: 1;
+	margin: 0;
+	font-size: 30px;
+	color: var(--text-color);
+	background-color: var(--background-color);
+	border-radius: 10px 0 0 10px;
+}
+.entry {
+	padding-right: 20px;
+        background-color: var(--background-color);
+}
+#default-pane {
+	background-color: var(--background-color);
+	grid-column: 2;
+	grid-row: 1;
+	width: 210px;
+	border-radius: 0 10px 10px 0;
+}
+.items {
+	color: transparent;
+	font-size: 30px;
+	/* display: none; */
+	grid-row: 1;
+	grid-column: 2;
+	padding-left: 0;
+	padding-top: 10px;
+	width: 0;
+	transition: width 0.05s;
+	/* transition: padding-left 0.1s; */
+	overflow: hidden;
+	border-radius: 0 10px 10px 0;
+}
+a {
+	text-decoration: none;
+	color: inherit	;
+}
+#education-items {
+	background-color: var(--color-1);
+}
+#communication-items {
+	background-color: var(--color-2);
+}
+#entertainment-items {
+	background-color: var(--color-3);
+}
+#programming-items {
+	background-color: var(--color-4);
+}
+#misc-items {
+	background-color: var(--color-5);
+}
+@media screen and ( max-height: 700px ) {
+	#greeting {
+		top: -20px;
+	}
+}
