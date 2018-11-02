@@ -1,6 +1,6 @@
 # Browser Start Page
-![Preview](https://imgur.com/o7HRdnt)
-
+![Preview](https://i.imgur.com/o7HRdnt.png)
+![Video Preview](https://i.imgur.com/9NzJyTA.mp4)
 # How to use
 There are three ways to use this page:
 1. (Not recommended) Use your mouse to hover over the categories to open the menu, then click on the link you wish to open.
