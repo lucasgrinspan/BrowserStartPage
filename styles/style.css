@@ -25,7 +25,11 @@ body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+<<<<<<< HEAD
 
+=======
+        user-select: none;
+>>>>>>> c9a380d4e0028758111005eb9c9b78838bab3663
 	font-family: 'Roboto Mono', monospace;
 }
 #greeting {
@@ -34,8 +38,11 @@ body {
         top: 10%;
         font-family: 'Pacifico';
         font-weight: 500;
+<<<<<<< HEAD
         user-select: none;
         -moz-user-select: none;
+=======
+>>>>>>> c9a380d4e0028758111005eb9c9b78838bab3663
 }
 #app-block {
 	display: grid;
