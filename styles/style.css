@@ -37,7 +37,7 @@ body {
         font-weight: 500;
         user-select: none;
         -moz-user-select: none;
-        color: var(--text-color);
+        color: var(--background-color);
 }
 #app-block {
 	display: grid;
