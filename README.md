@@ -22,7 +22,7 @@ The color of the app panel is determined by line 3 in the `styles/style.css` fil
 ### Highlight colors
 The colors of the various highlights are determined by lines 6-10 in the `style/style.css` file. Replace them with colors of your choosing. The defaults are `#883d26`, `#428826`, `#887e26`, `#267488`, `#88266f`.
 ### Fonts
-In the `style/styles.css` file, line 29 determines the fonts for the menus and links and line 35 determines the font for the greeting. If your system has fonts installed, you can simply replace the value to the font you prefer. If you don't have those fonts installed, you can follow the directions on Google fonts or you can download one of your choosing and use the `@font-face` selector in the same format as the ones used in lines 12-19.
+In the `style/styles.css` file, line 30 determines the fonts for the menus and links and line 36 determines the font for the greeting. If your system has fonts installed, you can simply replace the value to the font you prefer. If you don't have those fonts installed, you can follow the directions on Google fonts or you can download one of your choosing and use the `@font-face` selector in the same format as the ones used in lines 12-19.
 ### Greeting text
 In the `index.html` file, line 8 determines the greeting text. By default, it is set to `hello`. Change this to whichever you please. 
 ### Links and menu categories.
