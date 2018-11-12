@@ -52,9 +52,13 @@ body {
         display: none;
         background-color: var(--background-color);
         color: var(--text-color);
-        grid-column: 1;
+        grid-column-start: 1;
+        grid-column-end: 2;
         grid-row: 1;
-        font-size: 30px;
+        font-size: 25px;
+        border: none;
+        border-radius: 10px;
+        padding-left: 15px;
 }
 #app-menu {
 	padding-left: 10px;

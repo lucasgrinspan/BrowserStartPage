@@ -53,10 +53,13 @@ function initializeSearch() {
     var menu = document.getElementById('app-menu');
     var appBlock = document.getElementById('app-block');
     var searchField = document.getElementById('search-field');
+    var defaultPane = document.getElementById('default-pane');
+    defaultPane.style.display = 'none';
     menu.style.display = 'none';
-    appBlock.style.width = '300px';
+    appBlock.style.width = '429px';
     appBlock.style.height = '50px';
     searchField.style.display = 'block';
+    searchField.focus();
 }
 function displaySubMenu(event, id) {
     if (event == null) {
