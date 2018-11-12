@@ -265,7 +265,11 @@ document.onkeydown = function(evt) {
         searchSelection = true;
         initializeSearch();
     } 
-
+    if (searchSelection) {
+        if (charCode == 13) {
+            conductSearch(document.getElementById('search-field').value);
+        }
+    }
 }
 
 for (var i = 0; i < entries.length; i++) {
