@@ -61,6 +61,17 @@ function initializeSearch() {
     searchField.style.display = 'block';
     searchField.focus();
 }
+function resetSearch() {
+    var menu = document.getElementById('app-menu');
+    var appBlock = document.getElementById('app-block');
+    var searchField = document.getElementById('search-field');
+    var defaultPane = document.getElementById('default-pane');
+    defaultPane.style.display = 'block';
+    menu.style.display = 'block';
+    appBlock.style.width = '464px';
+    appBlock.style.height = '223px';  
+    searchField.style.display = 'none';
+}
 function displaySubMenu(event, id) {
     if (event == null) {
         idName = id;
@@ -266,8 +277,18 @@ document.onkeydown = function(evt) {
         initializeSearch();
     } 
     if (searchSelection) {
+        var searchField = document.getElementById('search-field');
         if (charCode == 13) {
-            conductSearch(document.getElementById('search-field').value);
+            conductSearch(searchField.value);
+        }
+        if (charCode == 8 && searchField.value.length == 0) { //Backspace and field is empty
+            resetSearch();
+            searchSelection = false;
+        }
+        if (charCode == 27) {
+            searchField.value = '';
+            resetSearch();
+            searchSelection = false;
         }
     }
 }

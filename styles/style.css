@@ -59,6 +59,7 @@ body {
         border: none;
         border-radius: 10px;
         padding-left: 15px;
+        font-family: 'Roboto Mono', monospace;
 }
 #app-menu {
 	padding-left: 10px;
