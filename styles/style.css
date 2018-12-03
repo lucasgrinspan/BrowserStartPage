@@ -44,6 +44,22 @@ body {
 	grid-template-columns: auto 200px;
         user-select: none;
         -moz-user-select: none;
+        transition: all 0.1s ease;
+        height: 223px;
+        width: 464px;
+}
+#search-field {
+        display: none;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 1;
+        font-size: 25px;
+        border: none;
+        border-radius: 10px;
+        padding-left: 15px;
+        font-family: 'Roboto Mono', monospace;
 }
 #app-menu {
 	padding-left: 10px;

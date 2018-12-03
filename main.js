@@ -2,6 +2,7 @@ const UP = '&';
 const DOWN = '(';
 const RIGHT = '\'';
 const LEFT = '%';
+const SEARCH_ADDRESS = 'https://duckduckgo.com/?q='
 
 var entries = document.getElementsByClassName("entry");
 var submenus = document.getElementsByClassName("items");
@@ -20,6 +21,8 @@ var linkSelection = false;
 var numSelection = false;
 // Represents if numeric navigation for submenu is enabled
 var subNumSelection = false;
+// Represents if search is enabled
+var searchSelection = false;
 
 // Load colors
 backgroundColor = window.getComputedStyle(document.getElementById("app-menu"), null)["background-color"];
@@ -39,8 +42,36 @@ var colorDict = {
     "programming-items": color4,
     "misc-items": color5
 };
-
-
+function isLetter(c) {
+    return c.toLowerCase() != c.toUpperCase();
+}
+function conductSearch(string) {
+    url = SEARCH_ADDRESS + string;
+    window.location.href = url;
+}
+function initializeSearch() {
+    var menu = document.getElementById('app-menu');
+    var appBlock = document.getElementById('app-block');
+    var searchField = document.getElementById('search-field');
+    var defaultPane = document.getElementById('default-pane');
+    defaultPane.style.display = 'none';
+    menu.style.display = 'none';
+    appBlock.style.width = '429px';
+    appBlock.style.height = '50px';
+    searchField.style.display = 'block';
+    searchField.focus();
+}
+function resetSearch() {
+    var menu = document.getElementById('app-menu');
+    var appBlock = document.getElementById('app-block');
+    var searchField = document.getElementById('search-field');
+    var defaultPane = document.getElementById('default-pane');
+    defaultPane.style.display = 'block';
+    menu.style.display = 'block';
+    appBlock.style.width = '464px';
+    appBlock.style.height = '223px';  
+    searchField.style.display = 'none';
+}
 function displaySubMenu(event, id) {
     if (event == null) {
         idName = id;
@@ -154,7 +185,7 @@ document.onkeydown = function(evt) {
 
     // Uncomment for debugging key navigation
     //console.log(charStr);
-    console.log(charCode);
+    //console.log(charCode);
 
     // Handle keypresses
     navKeys = ['&', '(', '\'', '%'];
@@ -238,6 +269,26 @@ document.onkeydown = function(evt) {
             clearLink(null, links[linkNumber]);
         } else if (isNaN(parseInt(charStr, 10))) {
             displayNextSubMenu(charStr);
+        }
+    }
+    // Search initialization
+    if (isLetter(charStr) && !searchSelection) {
+        searchSelection = true;
+        initializeSearch();
+    } 
+    if (searchSelection) {
+        var searchField = document.getElementById('search-field');
+        if (charCode == 13) {
+            conductSearch(searchField.value);
+        }
+        if (charCode == 8 && searchField.value.length == 0) { //Backspace and field is empty
+            resetSearch();
+            searchSelection = false;
+        }
+        if (charCode == 27) {
+            searchField.value = '';
+            resetSearch();
+            searchSelection = false;
         }
     }
 }
